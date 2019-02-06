@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+
+svg circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #666;
+  stroke-width: 1em;
+}
+
+/* #svg_protein #bar_protein {
+  stroke: #FF9F1E;
+}
+
+#svg_carbs #bar_carbs {
+  stroke: #FF9F1E;
+}
+
+#svg_fat #bar_fat {
+  stroke: #FF9F1E;
+} */
+
+.filler {
+  stroke: #666;
+}
+
+.cont {
+  height: 200px;
+  width: 200px;
+  box-shadow: 0 0 1em black;
+  border-radius: 100%;
+  position: relative;
+}
+
+#container {
+  margin: 2em auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cont.middle {
+  margin: 0 auto;
+}
+
+.cont.left {
+  margin-left: 10%;
+  float: left;
+}
+
+.cont.right {
+  float: right;
+  margin-top: -200px;
+  margin-right: 10%;
+}
+
+.cont:after {
+  position: absolute;
+  display: block;
+  height: 160px;
+  width: 160px;
+  left: 50%;
+  top: 50%;
+  box-shadow: inset 0 0 1em black;
+  margin-top: -80px;
+  margin-left: -80px;
+  border-radius: 100%;
+  line-height: 160px;
+  font-size: 2em;
+  text-shadow: 0 0 0.5em black;
+}
+
+.cont_carbs:after {
+  content: attr(data-pct)" C";
+}
+
+.cont_fat:after {
+  content: attr(data-pct)" F";
+}
+
+.cont_protein:after {
+  content: attr(data-pct)" P";
+}
+
+
+
+
+input {
+  color: #000;
+}
+
+
+/* Make things perty */
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  height: 100%;
+  padding-top: 2em;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5em black;
+}
+
+h2 {
+  font-weight: 300
+}
+
+input {
+  border: 1px solid #666;
+  background: #333;
+  color: #fff;
+  padding: 0.5em;
+  box-shadow: none;
+  outline: none !important;
+  margin: 1em auto;
+  text-align: center;
+  width: 10%;
+  font-size: 24px;
+}
+
+label {
+  font-size:24px;
+
+}
+
+@media only screen and (max-width: 792px) {
+  
+}

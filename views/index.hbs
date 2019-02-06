@@ -1,0 +1,46 @@
+<h1>
+     <span style="color:rgb(101, 111, 101)">Ma</span>
+     <span style="color:rgb(255, 0, 0)">Macros</span>
+</h1><br><br>
+<div>
+     <h1 style="display:inline; float:left; margin-left:14% ">Carbs</h1>
+     <h1 style="display:inline; margin-right:2% ">Protein</h1>
+     <h1 style="display:inline; float: right; margin-right:15% ">Fat</h1>
+</div>
+
+<div id="container">
+     {{!-- Left: Carbohydrates --}}
+     <div class="cont left cont_carbs" data-pct="0">
+          <svg id="svg_carbs" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+               <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+               <circle class="filler_carbs" id="bar_carbs" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+          </svg>
+     </div>
+
+     {{!-- Middle: Protein --}}
+     <div class="cont middle cont_protein" data-pct="0">
+          <svg id="svg_protein" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+               <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+               <circle class="filler_protein" id="bar_protein" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+          </svg>
+     </div>
+
+     {{!-- Right: Fat --}}
+     <div class="cont right cont_fat" data-pct="0">
+          <svg id="svg_fat" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+               <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+               <circle class="filler_fat" id="bar_fat" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+          </svg>
+     </div>
+     
+</div>
+
+<input style="float: left; margin-left: 11%" id="carbs_in" name="percent" placeholder="Carbs">
+<input id="protein_in" name="percent" placeholder="Protein">
+<input style="float: right; margin-right: 11%" id="fat_in" name="percent" placeholder="Fat">
+
+<br>
+
+<input style="float: left; margin-left: 11%" id="carbs_max" placeholder="MAX">
+<input id="protein_max" placeholder="MAX">
+<input style="float: right; margin-right: 11%" id="fat_max" placeholder="MAX">
