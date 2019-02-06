@@ -3,6 +3,7 @@ $( document ).ready(function() {
 	PROTEIN = 200;
 	CARBS = 70;
 	FAT = 80;
+	
 	$('#protein_max, #carbs_max, #fat_max').on('keyup change', function(){
 		// If changed
 		PROTEIN = $('#protein_max').val();
@@ -22,6 +23,8 @@ $( document ).ready(function() {
 			CARBS = 70;
 			$('#carbs_max').attr('placeholder', CARBS);
 		}
+
+		$('#cals').text('Calories: ' + ( (CARBS * 4) + (FAT * 9) + (PROTEIN * 4)) );
 	});
 
 	// carbs
