@@ -3,7 +3,13 @@ $( document ).ready(function() {
 	PROTEIN = 200;
 	CARBS = 70;
 	FAT = 80;
-	
+
+	$('.cont_protein').attr('data-pct', -PROTEIN);	
+	$('.cont_carbs').attr('data-pct', -CARBS);	
+	$('.cont_fat').attr('data-pct', -FAT);	
+
+	$('#goal_cals').text('Goal: ' +( (CARBS * 4) + (FAT * 9) + (PROTEIN * 4)));
+
 	$('#protein_max, #carbs_max, #fat_max').on('keyup change', function(){
 		// If changed
 		PROTEIN = $('#protein_max').val();
@@ -23,8 +29,7 @@ $( document ).ready(function() {
 			CARBS = 70;
 			$('#carbs_max').attr('placeholder', CARBS);
 		}
-
-		$('#cals').text('Calories: ' + ( (CARBS * 4) + (FAT * 9) + (PROTEIN * 4)) );
+		$('#goal_cals').text('Goal: ' +( (CARBS * 4) + (FAT * 9) + (PROTEIN * 4)));
 	});
 
 	// carbs
@@ -79,6 +84,14 @@ function edit(val, $circle, cont, macros) {
 		percent = (val / macros) * 100
 		var pct = ((cx-percent)/cx)*c;
 		$circle.css({ strokeDashoffset: pct});
+		updateCal();
 	}
-	$(cont).attr('data-pct', realValue);	
+	$(cont).attr('data-pct', realValue - macros);	
+}
+
+function updateCal() {
+	current_carbs = $('#carbs_in').val();
+	current_protein = $('#protein_in').val();
+	current_fat = $('#fat_in').val();
+	$('#cals').text('Calories: ' + ( (current_carbs * 4) + (current_fat * 9) + (current_protein * 4)) );
 }
