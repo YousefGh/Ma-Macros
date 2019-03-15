@@ -10,6 +10,7 @@ $( document ).ready(function() {
 
 	$('#goal_cals').text('Goal: ' +( (CARBS * 4) + (FAT * 9) + (PROTEIN * 4)));
 
+	// Changing the maximum intake
 	$('#protein_max, #carbs_max, #fat_max').on('keyup change', function(){
 		// If changed
 		PROTEIN = $('#protein_max').val();
@@ -30,6 +31,11 @@ $( document ).ready(function() {
 			$('#carbs_max').attr('placeholder', CARBS);
 		}
 		$('#goal_cals').text('Goal: ' +( (CARBS * 4) + (FAT * 9) + (PROTEIN * 4)));
+
+		$('.cont_protein').attr('data-pct', -PROTEIN);	
+		$('.cont_carbs').attr('data-pct', -CARBS);	
+		$('.cont_fat').attr('data-pct', -FAT);	
+
 	});
 
 	// carbs
