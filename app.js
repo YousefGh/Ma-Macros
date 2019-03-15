@@ -24,7 +24,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 setInterval(function() {
-  http.get("https://mamacros.herokuapp.com");
+  http.get("https://mamacros.herokuapp.com/");
 }, 300000); // every 5 minutes (300000)
 
 // catch 404 and forward to error handler
